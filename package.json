@@ -1,0 +1,18 @@
+{
+  "name": "survey-scaffolding",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify index.js -o survey.js -t [ babelify --presets [ es2015 ]]",
+    "compress": "uglifyjs --compress --mangle -o survey.min.js -- survey.js",
+    "watch": "watchify index.js -o survey.js --debug --verbose"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babelify": "^7.3.0",
+    "bundle-minify": "^1.0.0"
+  }
+}

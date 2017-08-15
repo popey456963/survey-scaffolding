@@ -1,0 +1,159 @@
+body {
+	background: none !important;
+}
+
+a {
+	color: #039be5 !important;
+}
+
+.prev {
+	float: left;
+}
+
+.survey {
+	font-family: 'Raleway';
+	font-weight: 300;
+	padding: 40px;
+}
+
+.questions-container, .results-container {
+	width: 100%;
+	min-height: 380px;
+}
+
+.questions-controller, .results-controller {
+  position: relative;
+  height: 60px;
+  padding: 12px 14px;
+}
+
+.questions-controller button, .results-controller button {
+  border: none;
+  padding: 8px 18px;
+  font-weight: 300;
+  border-radius: 4px;
+}
+
+.back {
+  display: inline-block;
+  position: relative;
+  float: left;
+}
+
+.next {
+  display: inline-block;
+  position: relative;
+  float: right;
+}
+
+.questions-container label {
+  width: 100%;
+	padding: 10px 10px;
+	margin: 0px !important;
+}
+
+.questions-container label:hover {
+  cursor: pointer;
+}
+
+.question p, .results h1 {
+	font-size: 22px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  line-height: 40px;
+}
+
+.results p {
+  font-weight: 500;
+}
+
+.question label p {
+	display: inline-block;
+  position: relative;
+  top: 2px;
+  left: 5px;
+  margin: 0px;
+  font-size: 115%;
+}
+
+input {
+  width: 100%;
+  height: 52px;
+  border: none;
+  text-indent: 15px;
+  font-size: 18px;
+}
+
+input:focus {
+  outline: none;
+}
+
+input[type="radio"] {
+	display: none;
+}
+
+input[type="radio"] + label {
+	color: #292321;
+  font-family: 'Raleway';
+  font-weight: 300;
+  font-size: 16px;
+}
+
+input[type="radio"] + label span {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	margin: 2px 4px 0 0;
+	vertical-align: middle;
+	cursor: pointer;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+
+input[type="radio"] + label span {
+ 	background-color: #333;
+	-webkit-transition: background-color 0.20s ease-in-out;
+	-o-transition: background-color 0.20s ease-in-out;
+	-moz-transition: background-color 0.20s ease-in-out;
+	transition: background-color 0.20s ease-in-out;
+}
+
+input[type="radio"]:checked + label span {
+	border: 2px solid #3DD2AF;
+	background: transparent;
+}
+
+input[type="radio"] + label span,
+input[type="radio"]:checked + label span {
+	-webkit-transition: background-color 0.20s ease-in-out;
+	-o-transition: background-color 0.20s ease-in-out;
+	-moz-transition: background-color 0.20s ease-in-out;
+	transition: background-color 0.20s ease-in-out;
+}
+
+.survey-item {
+  margin-bottom: 15px;
+	border-bottom: 1px solid rgba(33,33,33,0.15);
+  border-radius: 0px 0px 4px 4px;
+}
+
+button:focus {
+  outline: none;
+	border: none;
+}
+
+button {
+  display: inline-block;
+}
+
+.question {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
