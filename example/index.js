@@ -1,26 +1,48 @@
-console.log(new Surveyor({
+function push_results(data) {
+  $('.results-container').append(data)
+}
+
+function on_finish(results) {
+  console.log('results', results)
+  push_results(`<h1>Thank-you for filling out the survey.</h1>`)
+  push_results(`<p>${JSON.stringify(results)}</p>`)
+}
+
+let Survey = new Surveyor({
   'start': {
-    question: 'What do you want to do?',
+    question: 'First query?',
     answers: [{
       type: 'radio',
-      route: 'next-item',
-      item: 'Report a player'
+      route: 'continue',
+      item: 'Continue'
     }, {
       type: 'radio',
-      route: 'next-item',
-      item: 'Request to be unbanned'
+      route: 'end',
+      item: 'Finish Survey'
     }]
   },
-  'next-item': {
-    question: 'Some new item?',
+  'continue': {
+    question: 'Second query?',
     answers: [{
       type: 'radio',
-      route: 'next-item',
-      item: 'A'
+      route: 'no-choice',
+      item: 'No Choice'
     }, {
       type: 'radio',
-      route: 'next-item',
-      item: 'B'
+      route: 'no-choice',
+      item: 'No Choice'
+    }]
+  },
+  'no-choice': {
+    question: 'Third query?',
+    answers: [{
+      type: 'radio',
+      route: 'end',
+      item: 'Finish Survey'
+    }, {
+      type: 'radio',
+      route: 'end',
+      item: 'Finish Survey'
     }]
   }
-}))
+}, on_finish)
