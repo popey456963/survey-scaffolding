@@ -26,7 +26,7 @@ class Surveyor {
     this.previous = []
     this.finish = finish
     this.options = Object.assign(defaults, options)
-    this.types = { 'radio': this.radioType }
+    this.types = { 'radio': this.radioType, 'date': this.dateType, 'text': this.textType }
 
     // Add each question to the document
     for (var [index, item] of Object.entries(this.questions)) {
@@ -157,6 +157,22 @@ Surveyor.prototype.radioType = function(question_index, index, item) {
         <span></span>
         <p>${item.item}</p>
       </label>
+    </div>
+  `
+}
+
+Surveyor.prototype.textType = function(question_index, index, item) {
+  return `
+    <div class='survey-item'>
+      <input type='text' placeholder='${item.placeholder}' data-question='${question_index}'
+    </div>
+  `
+}
+
+Surveyor.prototype.dateType = function(question_index, index, item) {
+  return `
+    <div class='survey-item'>
+      <input type='text' class='datetimepicker' id='datetimepicker-${question_index}' data-question='${question_index}' data-format='mm/dd/yyyy hh:mm' />
     </div>
   `
 }
