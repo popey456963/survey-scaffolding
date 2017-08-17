@@ -41,16 +41,16 @@ let Survey = new Surveyor({
 
 Surveyor : Class (questions, finish_callback, options)
 
-questions : Object (question, answers[])
+questions : Object (question, answers[])  
 question : String - 'Contains the prompt for the user'
 
-answers[] : Array of Objects (type, route, item, placeholder)
-type : String - 'Type of input device (e.g. radio, date, text)'
-route : String - 'The next place to take the user'
-item : String - 'Value of the input field (radio)'
+answers[] : Array of Objects (type, route, item, placeholder)  
+type : String - 'Type of input device (e.g. radio, date, text)'  
+route : String - 'The next place to take the user'  
+item : String - 'Value of the input field (radio)'  
 placeholder : String - 'Default value of field (text)'
 
-finish_callback : Function (results)
+finish_callback : Function (results)  
 results : Object - 'Key value pairs of route name and the value given'
 
 options : Object (various)
